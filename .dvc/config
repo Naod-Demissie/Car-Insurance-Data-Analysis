@@ -1,0 +1,4 @@
+[core]
+    remote = localdata
+['remote "localdata"']
+    url = C:\dev\Side-Projects\10 Acadamy\W3 Challenge\Car-Insurance-Data-Analysis\data
