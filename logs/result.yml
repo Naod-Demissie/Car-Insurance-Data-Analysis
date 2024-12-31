@@ -1,0 +1,63 @@
+LinearRegression:
+  TotalClaims:
+    model_config:
+      model_type: LinearRegression
+      params:
+        fit_intercept: false
+    results:
+      mean_mse: 0.0
+      mean_r2: 1.0
+  TotalPremium:
+    model_config:
+      model_type: LinearRegression
+      params:
+        fit_intercept: true
+    results:
+      mean_mse: 289.2932616449334
+      mean_r2: -1.2130109407756842
+RandomForest:
+  TotalClaims:
+    model_config:
+      model_type: RandomForestRegressor
+      params:
+        max_depth: null
+        min_samples_leaf: 1
+        min_samples_split: 5
+        n_estimators: 100
+    results:
+      mean_mse: 0.0
+      mean_r2: 1.0
+  TotalPremium:
+    model_config:
+      model_type: RandomForestRegressor
+      params:
+        max_depth: 20
+        min_samples_leaf: 1
+        min_samples_split: 2
+        n_estimators: 50
+    results:
+      mean_mse: 53.81101246458698
+      mean_r2: 0.6165807709644857
+XGBoost:
+  TotalClaims:
+    model_config:
+      model_type: XGBRegressor
+      params:
+        learning_rate: 0.01
+        max_depth: 3
+        n_estimators: 50
+        subsample: 0.8
+    results:
+      mean_mse: 0.0
+      mean_r2: 1.0
+  TotalPremium:
+    model_config:
+      model_type: XGBRegressor
+      params:
+        learning_rate: 0.1
+        max_depth: 3
+        n_estimators: 100
+        subsample: 0.8
+    results:
+      mean_mse: 49.4179674934049
+      mean_r2: 0.640704791859124

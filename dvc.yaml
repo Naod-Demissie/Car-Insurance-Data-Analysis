@@ -11,6 +11,7 @@ stages:
     outs:
       - data/processed/processed_data.csv
 
+
   tune:
     cmd: >
       python src/tune.py 
@@ -26,3 +27,20 @@ stages:
     outs:
       - logs/tuner_results.yml
       - configs/best_tuned_model.json
+
+  train:
+    cmd: >
+      python src/train.py 
+      --data data/processed/processed_data.csv 
+      --config configs/best_tuned_model.json 
+      --result_file logs/result.yml 
+      --checkpoint_dir checkpoints
+    deps:
+      - data/processed/processed_data.csv
+      - configs/best_tuned_model.json
+    outs:
+      - logs/result.yml:
+          cache: true
+      - checkpoints:
+          cache: true
+          persist: true
