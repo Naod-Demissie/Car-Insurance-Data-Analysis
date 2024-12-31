@@ -42,16 +42,6 @@ The project focuses on analyzing car insurance data using EDA, hypothesis testin
    pip install -r requirements.txt
    ```
 
-## Running the Streamlit
-
-Navigate to the app folder:
-```bash
-cd path/to/app
-```
-Run the Streamlit app:
-```bash
-streamlit run app.py
-```
 
 ## Contribution
 
