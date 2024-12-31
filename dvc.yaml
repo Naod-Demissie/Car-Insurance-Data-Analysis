@@ -44,3 +44,16 @@ stages:
       - checkpoints:
           cache: true
           persist: true
+
+  interprete:
+    cmd: > 
+      python src/model_interpreter.py
+      --input data/processed/data_splits.npz 
+      --config configs/model_config.json 
+      --output reports/interpretation.json
+    deps:
+      - src/model_interpreter.py
+      - data/processed/data_splits.npz
+      - configs/model_config.json
+    outs:
+      - reports/interpretation.json
