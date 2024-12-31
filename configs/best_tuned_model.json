@@ -1,0 +1,56 @@
+{
+    "models": {
+        "TotalPremium": {
+            "LinearRegression": {
+                "model_type": "LinearRegression",
+                "params": {
+                    "fit_intercept": true
+                }
+            },
+            "RandomForest": {
+                "model_type": "RandomForestRegressor",
+                "params": {
+                    "n_estimators": 50,
+                    "max_depth": 20,
+                    "min_samples_split": 2,
+                    "min_samples_leaf": 1
+                }
+            },
+            "XGBoost": {
+                "model_type": "XGBRegressor",
+                "params": {
+                    "n_estimators": 100,
+                    "max_depth": 3,
+                    "learning_rate": 0.1,
+                    "subsample": 0.8
+                }
+            }
+        },
+        "TotalClaims": {
+            "LinearRegression": {
+                "model_type": "LinearRegression",
+                "params": {
+                    "fit_intercept": false
+                }
+            },
+            "RandomForest": {
+                "model_type": "RandomForestRegressor",
+                "params": {
+                    "n_estimators": 100,
+                    "max_depth": null,
+                    "min_samples_split": 5,
+                    "min_samples_leaf": 1
+                }
+            },
+            "XGBoost": {
+                "model_type": "XGBRegressor",
+                "params": {
+                    "n_estimators": 50,
+                    "max_depth": 3,
+                    "learning_rate": 0.01,
+                    "subsample": 0.8
+                }
+            }
+        }
+    }
+}

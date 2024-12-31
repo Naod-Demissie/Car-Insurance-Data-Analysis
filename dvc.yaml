@@ -11,3 +11,18 @@ stages:
     outs:
       - data/processed/processed_data.csv
 
+  tune:
+    cmd: >
+      python src/tune.py 
+      --data data/processed/processed_data.csv 
+      --config configs/tuner.json 
+      --results logs/tuner_results.yml 
+      --output configs/best_tuned_model.json
+
+    deps:
+      - src/tune.py
+      - configs/tuner.json
+      - data/processed/processed_data.csv
+    outs:
+      - logs/tuner_results.yml
+      - configs/best_tuned_model.json
