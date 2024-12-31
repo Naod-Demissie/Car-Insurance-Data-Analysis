@@ -1,0 +1,13 @@
+stages:
+  preprocess:
+    cmd: >
+      python src/preprocess.py
+      --input_path data/raw/MachineLearningRating_v3.txt
+      --output_path data/processed/processed_data.csv
+      --missing_threshold 0.6
+    deps:
+      - src/preprocess.py
+      - data/raw/MachineLearningRating_v3.txt
+    outs:
+      - data/processed/processed_data.csv
+
