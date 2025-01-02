@@ -4,27 +4,47 @@ The project focuses on analyzing car insurance data using EDA, hypothesis testin
 ## Project Structure
 
 ```
-├── .vscode/
-│   └── settings.json
-├── .github/
-│   └── workflows/
-│       ├── unittests.yml
-├── .gitignore
-├── requirements.txt
-├── README.md
-├── src/
-│   ├── __init__.py
-│   ├── preprocess_data.py
+├── checkpoints/
+│   ├── LinearRegression_TotalClaims_model.pkl      
+│   ├── LinearRegression_TotalPremium_model.pkl     
+│   ├── RandomForest_TotalClaims_model.pkl          
+│   ├── RandomForest_TotalPremium_model.pkl         
+│   ├── XGBoost_TotalClaims_model.pkl               
+│   ├── XGBoost_TotalPremium_model.pkl              
+│
+├── configs/
+│   ├── best_tuned_model.json                       
+│   ├── tuner.json                                  
+│
+├── data/
+│   ├── processed/                                  
+│   ├── raw/                                        
+│
+├── logs/
+│   ├── result.yml                                  
+│   ├── tuner_results.yml                           
+│
 ├── notebooks/
-│   ├── __init__.py
-│   ├── README.md
-│   ├── 1.0-insurance-data-exploration.ipynb
-├── tests/
-│   ├── __init__.py
+│   ├── 1.0-insurance-data-exploration.ipynb        
+│   ├── 3.0-ab_hypothesis_testing.ipynb            
+│   ├── 4.0-statistical-modeling.ipynb             
+│   ├── README.md                                   
+│   ├── __init__.py                                 
+│
 ├── scripts/
-│   ├── __init__.py
-│   └── README.md
-
+│   ├── README.md                                   
+│   ├── __init__.py                                 
+│
+├── src/
+│   ├── interprate.py                               
+│   ├── preprocess.py                               
+│   ├── test_hypothesis.py                          
+│   ├── train.py                                    
+│   ├── tune.py                                     
+│   ├── __init__.py                                 
+│
+├── tests/
+│   ├── __init__.py                                 
 ```
 
 ## Installation
