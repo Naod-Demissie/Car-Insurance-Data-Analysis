@@ -1,0 +1,324 @@
+{
+    "models": {
+        "TotalPremium": {
+            "LinearRegression": {
+                "best": {
+                    "model_type": "LinearRegression",
+                    "params": {
+                        "fit_intercept": true
+                    },
+                    "best_r2": 0.5668670326376246,
+                    "best_rmse": 54.94217226661391
+                },
+                "all_results": [
+                    {
+                        "params": {
+                            "fit_intercept": true
+                        },
+                        "r2_score": 0.5668670326376246,
+                        "rmse": 54.94217226661391
+                    },
+                    {
+                        "params": {
+                            "fit_intercept": false
+                        },
+                        "r2_score": 0.5668081531314413,
+                        "rmse": 54.94964103074747
+                    }
+                ]
+            },
+            "RandomForest": {
+                "best": {
+                    "model_type": "RandomForestRegressor",
+                    "params": {
+                        "n_estimators": 50,
+                        "max_depth": 20,
+                        "min_samples_split": 2,
+                        "min_samples_leaf": 1
+                    },
+                    "best_r2": 0.6646800418544075,
+                    "best_rmse": 42.53476020784019
+                },
+                "all_results": [
+                    {
+                        "params": {
+                            "n_estimators": 200,
+                            "max_depth": null,
+                            "min_samples_split": 5,
+                            "min_samples_leaf": 2
+                        },
+                        "r2_score": 0.6358912228103142,
+                        "rmse": 46.186572409772225
+                    },
+                    {
+                        "params": {
+                            "n_estimators": 100,
+                            "max_depth": 20,
+                            "min_samples_split": 2,
+                            "min_samples_leaf": 2
+                        },
+                        "r2_score": 0.630654591305262,
+                        "rmse": 46.850830113357844
+                    },
+                    {
+                        "params": {
+                            "n_estimators": 50,
+                            "max_depth": 20,
+                            "min_samples_split": 2,
+                            "min_samples_leaf": 1
+                        },
+                        "r2_score": 0.6646800418544075,
+                        "rmse": 42.53476020784019
+                    },
+                    {
+                        "params": {
+                            "n_estimators": 200,
+                            "max_depth": 10,
+                            "min_samples_split": 5,
+                            "min_samples_leaf": 1
+                        },
+                        "r2_score": 0.6452135596228491,
+                        "rmse": 45.004050012087426
+                    },
+                    {
+                        "params": {
+                            "n_estimators": 100,
+                            "max_depth": null,
+                            "min_samples_split": 5,
+                            "min_samples_leaf": 2
+                        },
+                        "r2_score": 0.6320593948090343,
+                        "rmse": 46.67263320404609
+                    }
+                ]
+            },
+            "XGBoost": {
+                "best": {
+                    "model_type": "XGBRegressor",
+                    "params": {
+                        "n_estimators": 100,
+                        "max_depth": 3,
+                        "learning_rate": 0.1,
+                        "subsample": 0.8
+                    },
+                    "best_r2": 0.6708486324285496,
+                    "best_rmse": 41.75228509856694
+                },
+                "all_results": [
+                    {
+                        "params": {
+                            "n_estimators": 100,
+                            "max_depth": 6,
+                            "learning_rate": 0.01,
+                            "subsample": 0.8
+                        },
+                        "r2_score": 0.5849230314658993,
+                        "rmse": 52.65179985716655
+                    },
+                    {
+                        "params": {
+                            "n_estimators": 100,
+                            "max_depth": 3,
+                            "learning_rate": 0.01,
+                            "subsample": 1.0
+                        },
+                        "r2_score": 0.5301248488367222,
+                        "rmse": 59.60285511450219
+                    },
+                    {
+                        "params": {
+                            "n_estimators": 50,
+                            "max_depth": 3,
+                            "learning_rate": 0.01,
+                            "subsample": 1.0
+                        },
+                        "r2_score": 0.3894269353427743,
+                        "rmse": 77.45014355299735
+                    },
+                    {
+                        "params": {
+                            "n_estimators": 100,
+                            "max_depth": 3,
+                            "learning_rate": 0.1,
+                            "subsample": 0.8
+                        },
+                        "r2_score": 0.6708486324285496,
+                        "rmse": 41.75228509856694
+                    },
+                    {
+                        "params": {
+                            "n_estimators": 50,
+                            "max_depth": 3,
+                            "learning_rate": 0.1,
+                            "subsample": 0.8
+                        },
+                        "r2_score": 0.633106792618384,
+                        "rmse": 46.53977259261908
+                    }
+                ]
+            }
+        },
+        "TotalClaims": {
+            "LinearRegression": {
+                "best": {
+                    "model_type": "LinearRegression",
+                    "params": {
+                        "fit_intercept": false
+                    },
+                    "best_r2": 1.0,
+                    "best_rmse": 0.0
+                },
+                "all_results": [
+                    {
+                        "params": {
+                            "fit_intercept": false
+                        },
+                        "r2_score": 1.0,
+                        "rmse": 0.0
+                    },
+                    {
+                        "params": {
+                            "fit_intercept": true
+                        },
+                        "r2_score": 1.0,
+                        "rmse": 0.0
+                    }
+                ]
+            },
+            "RandomForest": {
+                "best": {
+                    "model_type": "RandomForestRegressor",
+                    "params": {
+                        "n_estimators": 100,
+                        "max_depth": null,
+                        "min_samples_split": 5,
+                        "min_samples_leaf": 1
+                    },
+                    "best_r2": 1.0,
+                    "best_rmse": 0.0
+                },
+                "all_results": [
+                    {
+                        "params": {
+                            "n_estimators": 100,
+                            "max_depth": null,
+                            "min_samples_split": 5,
+                            "min_samples_leaf": 1
+                        },
+                        "r2_score": 1.0,
+                        "rmse": 0.0
+                    },
+                    {
+                        "params": {
+                            "n_estimators": 50,
+                            "max_depth": 20,
+                            "min_samples_split": 2,
+                            "min_samples_leaf": 2
+                        },
+                        "r2_score": 1.0,
+                        "rmse": 0.0
+                    },
+                    {
+                        "params": {
+                            "n_estimators": 200,
+                            "max_depth": null,
+                            "min_samples_split": 5,
+                            "min_samples_leaf": 1
+                        },
+                        "r2_score": 1.0,
+                        "rmse": 0.0
+                    },
+                    {
+                        "params": {
+                            "n_estimators": 50,
+                            "max_depth": 20,
+                            "min_samples_split": 5,
+                            "min_samples_leaf": 2
+                        },
+                        "r2_score": 1.0,
+                        "rmse": 0.0
+                    },
+                    {
+                        "params": {
+                            "n_estimators": 100,
+                            "max_depth": 10,
+                            "min_samples_split": 2,
+                            "min_samples_leaf": 2
+                        },
+                        "r2_score": 1.0,
+                        "rmse": 0.0
+                    }
+                ]
+            },
+            "XGBoost": {
+                "best": {
+                    "model_type": "XGBRegressor",
+                    "params": {
+                        "n_estimators": 50,
+                        "max_depth": 3,
+                        "learning_rate": 0.01,
+                        "subsample": 0.8
+                    },
+                    "best_r2": 1.0,
+                    "best_rmse": 0.0
+                },
+                "all_results": [
+                    {
+                        "params": {
+                            "n_estimators": 50,
+                            "max_depth": 3,
+                            "learning_rate": 0.01,
+                            "subsample": 0.8
+                        },
+                        "r2_score": 1.0,
+                        "rmse": 0.0
+                    },
+                    {
+                        "params": {
+                            "n_estimators": 100,
+                            "max_depth": 6,
+                            "learning_rate": 0.1,
+                            "subsample": 1.0
+                        },
+                        "r2_score": 1.0,
+                        "rmse": 0.0
+                    },
+                    {
+                        "params": {
+                            "n_estimators": 100,
+                            "max_depth": 3,
+                            "learning_rate": 0.1,
+                            "subsample": 1.0
+                        },
+                        "r2_score": 1.0,
+                        "rmse": 0.0
+                    },
+                    {
+                        "params": {
+                            "n_estimators": 100,
+                            "max_depth": 6,
+                            "learning_rate": 0.01,
+                            "subsample": 0.8
+                        },
+                        "r2_score": 1.0,
+                        "rmse": 0.0
+                    },
+                    {
+                        "params": {
+                            "n_estimators": 50,
+                            "max_depth": 6,
+                            "learning_rate": 0.01,
+                            "subsample": 0.8
+                        },
+                        "r2_score": 1.0,
+                        "rmse": 0.0
+                    }
+                ]
+            }
+        }
+    },
+    "targets": [
+        "TotalPremium",
+        "TotalClaims"
+    ]
+}

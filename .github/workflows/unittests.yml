@@ -5,10 +5,16 @@ on:
     branches:
       - main
       - task-1
+      - task-2
+      - task-3
+      - task-4
   pull_request:
     branches:
       - main
       - task-1
+      - task-2
+      - task-3
+      - task-4
 
 jobs:
   test:

@@ -1,0 +1,59 @@
+stages:
+  preprocess:
+    cmd: >
+      python src/preprocess.py
+      --input_path data/raw/MachineLearningRating_v3.txt
+      --output_path data/processed/processed_data.csv
+      --missing_threshold 0.6
+    deps:
+      - src/preprocess.py
+      - data/raw/MachineLearningRating_v3.txt
+    outs:
+      - data/processed/processed_data.csv
+
+
+  tune:
+    cmd: >
+      python src/tune.py 
+      --data data/processed/processed_data.csv 
+      --config configs/tuner.json 
+      --results logs/tuner_results.yml 
+      --output configs/best_tuned_model.json
+
+    deps:
+      - src/tune.py
+      - configs/tuner.json
+      - data/processed/processed_data.csv
+    outs:
+      - logs/tuner_results.yml
+      - configs/best_tuned_model.json
+
+  train:
+    cmd: >
+      python src/train.py 
+      --data data/processed/processed_data.csv 
+      --config configs/best_tuned_model.json 
+      --result_file logs/result.yml 
+      --checkpoint_dir checkpoints
+    deps:
+      - data/processed/processed_data.csv
+      - configs/best_tuned_model.json
+    outs:
+      - logs/result.yml:
+          cache: true
+      - checkpoints:
+          cache: true
+          persist: true
+
+  interprete:
+    cmd: > 
+      python src/model_interpreter.py
+      --input data/processed/data_splits.npz 
+      --config configs/model_config.json 
+      --output reports/interpretation.json
+    deps:
+      - src/model_interpreter.py
+      - data/processed/data_splits.npz
+      - configs/model_config.json
+    outs:
+      - reports/interpretation.json

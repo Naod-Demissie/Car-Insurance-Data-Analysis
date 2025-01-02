@@ -1,0 +1,44 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: "python src/preprocess.py --input_path data/raw/MachineLearningRating_v3.txt
+      --output_path data/processed/processed_data.csv --missing_threshold 0.6\n"
+    deps:
+    - path: data/raw/MachineLearningRating_v3.txt
+      hash: md5
+      md5: b9560ad32c78e56eee8a7f9efe31909d
+      size: 529362753
+    - path: src/preprocess.py
+      hash: md5
+      md5: 7f21800c69d62832e0fdd862cf422642
+      size: 7234
+    outs:
+    - path: data/processed/processed_data.csv
+      hash: md5
+      md5: 8469b4f062bf89310f68a578180a140e
+      size: 523905190
+  tune:
+    cmd: "python src/tune.py  --data data/processed/processed_data.csv  --config configs/tuner.json\
+      \  --results logs/tuner_results.yml  --output configs/best_tuned_model.json\n"
+    deps:
+    - path: configs/tuner.json
+      hash: md5
+      md5: c9deda292b8df5bed76a6382eab916a8
+      size: 619
+    - path: data/processed/processed_data.csv
+      hash: md5
+      md5: 8469b4f062bf89310f68a578180a140e
+      size: 523905190
+    - path: src/tune.py
+      hash: md5
+      md5: 44b06ae5bc3e4b652179aa9f0863a1f9
+      size: 12549
+    outs:
+    - path: configs/best_tuned_model.json
+      hash: md5
+      md5: fd78ffeb5deafc7e3998f004e609d2d7
+      size: 1722
+    - path: logs/tuner_results.yml
+      hash: md5
+      md5: b452dae3cd0ed2a9ba31c20859cdb63a
+      size: 12143
